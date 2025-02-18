@@ -109,7 +109,7 @@ def parseLogsToGetQueuePosition():
                     q_position = q_position.split(pattern2,1)[0]   # retain the part before the pattern2
                     print(q_position)
                 except IndexError:
-                    pass
+                    break
 
                 # Checking whether an alarm needs to be sent for the current position
                 sent_alarms_position = []
