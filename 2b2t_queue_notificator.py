@@ -9,7 +9,7 @@
 ## to the position for which notification sending is selected. If the substring "Connected to the server." 
 ## is found, a notification about that will be sent, after which the script will be terminated.
 ##
-## Tested with MultiMC launcher 0.7.0-4218, python 3.9.2 (but must work with lower versions).
+## Tested with MultiMC launcher 0.7.0-4218, python 3.9.2 (but must work with lower versions too).
 ## 
 ##
 ## Made by CoffeeUtilizer (minecraft nickname) Feb 18 2025.
@@ -109,7 +109,7 @@ def parseLogsToGetQueuePosition():
                     q_position = q_position.split(pattern2,1)[0]   # retain the part before the pattern2
                     print(q_position)
                 except IndexError:
-                    break
+                    continue
 
                 # Checking whether an alarm needs to be sent for the current position
                 sent_alarms_position = []
